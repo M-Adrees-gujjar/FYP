@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: none !important;
+}
+
+$primary_color : #4A3AFF;
+$heading_black : #0D0A2C;
+$text_grey : #585667;
+$color_1000 : #5F5C7F;
+$color_900 : #7F7CA2;
+$color_100 : #d1d0dc;
+$red_400 : #FF002F;
+
+//=============================
+
+@mixin btn-blue($wdt, $hgt, $crl) {
+    width: $wdt;
+    height: $hgt;
+    position: relative;
+
+    .button-1 {
+        width: 100%;
+        height: 100%;
+        background-color: $primary_color;
+        color: $crl;
+        border-radius: 10px;
+        transition: all 0.5s;
+        font-size: 12px;
+
+        &:hover {
+            background-color: transparent;
+        }
+
+        &:hover+.btn-overlay .child-box-overlay .btn-overlay-box-1,
+        &:hover+.btn-overlay .child-box-overlay .btn-overlay-box-2 {
+            height: 100%;
+            width: 50%;
+        }
+    }
+
+    .btn-overlay {
+        top: 0;
+        position: absolute;
+        z-index: -3;
+        width: 100%;
+        height: 100%;
+
+        .child-box-overlay {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            z-index: -2;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+
+            .btn-overlay-box-1 {
+                position: absolute;
+                right: 50%;
+                z-index: -1;
+                transition: all 0.3s;
+                background-color: $text_grey;
+                width: 0;
+                height: 0;
+                border-radius: 10px 0px 0px 10px;
+            }
+
+            .btn-overlay-box-2 {
+                position: absolute;
+                left: 50%;
+                z-index: 3;
+                transition: all 0.3s;
+                background-color: $text_grey;
+                width: 0;
+                height: 0;
+                border-radius: 0px 10px 10px 0px;
+            }
+        }
+    }
+}
+
+@mixin btn-white($wdt, $hgt, $crl) {
+    width: $wdt;
+    height: $hgt;
+    position: relative;
+
+    .button-1 {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        color: $crl;
+        border-radius: 10px;
+        transition: all 0.5s;
+        border: 1px solid $crl;
+
+        &:hover {
+            background-color: transparent;
+            border: none;
+            color: white;
+        }
+
+        &:hover+.btn-overlay .child-box-overlay .btn-overlay-box-1,
+        &:hover+.btn-overlay .child-box-overlay .btn-overlay-box-2 {
+            height: 100%;
+            width: 50%;
+        }
+    }
+
+    .btn-overlay {
+        top: 0;
+        position: absolute;
+        z-index: -3;
+        width: 100%;
+        height: 100%;
+
+        .child-box-overlay {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            z-index: -2;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+
+            .btn-overlay-box-1 {
+                position: absolute;
+                right: 50%;
+                z-index: -1;
+                transition: all 0.3s;
+                background-color: $primary_color;
+                width: 0;
+                height: 0;
+                border-radius: 10px 0px 0px 10px;
+            }
+
+            .btn-overlay-box-2 {
+                position: absolute;
+                left: 50%;
+                z-index: -1;
+                transition: all 0.3s;
+                background-color: $primary_color;
+                width: 0;
+                height: 0;
+                border-radius: 0px 10px 10px 0px;
+            }
+        }
+    }
+}
+
+
+//=============================
+
+nav {
+    // border: 1px solid blue;
+    box-shadow: 10px 1px 10px $text_grey !important;
+    padding: 0 !important;
+
+    #nav_child {
+        display: flex !important;
+        justify-content: space-between !important;
+
+        .navbar-toggler{
+            margin: 0px 5px;
+            font-size: 25px;
+            &:focus{
+                outline: none;
+                outline: 1px solid $text_grey;
+            }
+        }
+
+        .logo_img {
+            width: 75px;
+            height: 75px;
+            padding: 0 !important;
+
+            img {
+                border-radius: 50% !important;
+            }
+        }
+
+        #navbarSupportedContent {
+            width: fit-content;
+            place-content: flex-end;
+            gap: 10px;
+
+            ul {
+                gap: 20px;
+
+                li a {
+                    color: $text_grey !important;
+                    font-size: 1.1rem;
+                    border-bottom: 4px solid transparent;
+                    transition: all 0.5s;
+
+                    &:hover {
+                        border-bottom: 4px solid $primary_color;
+                    }
+                }
+            }
+
+
+            .form-button_one {
+                @include btn-white(90px, 45px, $text-grey);
+
+                button {
+                    font-size: 17px !important;
+                }
+            }
+
+            .form-button_two {
+                button {
+                    font-size: 17px !important;
+                }
+
+                @include btn-blue(120px, 50px, white);
+            }
+        }
+
+        form {
+            gap: 20px;
+        }
+    }
+}
