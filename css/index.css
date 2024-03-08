@@ -10,60 +10,49 @@ nav {
   box-shadow: 10px 1px 10px #585667 !important;
   padding: 0 !important;
 }
-
 nav #nav_child {
   display: flex !important;
   justify-content: space-between !important;
 }
-
 nav #nav_child .navbar-toggler {
   margin: 0px 5px;
   font-size: 25px;
 }
-
 nav #nav_child .navbar-toggler:focus {
   outline: none;
   outline: 1px solid #585667;
 }
-
 nav #nav_child .logo_img {
-  width: 75px;
-  height: 75px;
+  width: 85px;
+  height: 85px;
   padding: 0 !important;
 }
-
 nav #nav_child .logo_img img {
   border-radius: 50% !important;
 }
-
 nav #nav_child #navbarSupportedContent {
   width: -moz-fit-content;
   width: fit-content;
   place-content: flex-end;
   gap: 10px;
 }
-
 nav #nav_child #navbarSupportedContent ul {
   gap: 20px;
 }
-
 nav #nav_child #navbarSupportedContent ul li a {
   color: #585667 !important;
   font-size: 1.1rem;
   border-bottom: 4px solid transparent;
   transition: all 0.5s;
 }
-
 nav #nav_child #navbarSupportedContent ul li a:hover {
   border-bottom: 4px solid #4A3AFF;
 }
-
 nav #nav_child #navbarSupportedContent .form-button_one {
   width: 90px;
   height: 45px;
   position: relative;
 }
-
 nav #nav_child #navbarSupportedContent .form-button_one .button-1 {
   width: 100%;
   height: 100%;
@@ -73,19 +62,15 @@ nav #nav_child #navbarSupportedContent .form-button_one .button-1 {
   transition: all 0.5s;
   border: 1px solid #585667;
 }
-
 nav #nav_child #navbarSupportedContent .form-button_one .button-1:hover {
   background-color: transparent;
   border: none;
   color: white;
 }
-
-nav #nav_child #navbarSupportedContent .form-button_one .button-1:hover+.btn-overlay .child-box-overlay .btn-overlay-box-1,
-nav #nav_child #navbarSupportedContent .form-button_one .button-1:hover+.btn-overlay .child-box-overlay .btn-overlay-box-2 {
+nav #nav_child #navbarSupportedContent .form-button_one .button-1:hover + .btn-overlay .child-box-overlay .btn-overlay-box-1, nav #nav_child #navbarSupportedContent .form-button_one .button-1:hover + .btn-overlay .child-box-overlay .btn-overlay-box-2 {
   height: 100%;
   width: 50%;
 }
-
 nav #nav_child #navbarSupportedContent .form-button_one .btn-overlay {
   top: 0;
   position: absolute;
@@ -93,7 +78,6 @@ nav #nav_child #navbarSupportedContent .form-button_one .btn-overlay {
   width: 100%;
   height: 100%;
 }
-
 nav #nav_child #navbarSupportedContent .form-button_one .btn-overlay .child-box-overlay {
   width: 100%;
   height: 100%;
@@ -104,7 +88,6 @@ nav #nav_child #navbarSupportedContent .form-button_one .btn-overlay .child-box-
   justify-content: center;
   align-items: center;
 }
-
 nav #nav_child #navbarSupportedContent .form-button_one .btn-overlay .child-box-overlay .btn-overlay-box-1 {
   position: absolute;
   right: 50%;
@@ -115,7 +98,6 @@ nav #nav_child #navbarSupportedContent .form-button_one .btn-overlay .child-box-
   height: 0;
   border-radius: 10px 0px 0px 10px;
 }
-
 nav #nav_child #navbarSupportedContent .form-button_one .btn-overlay .child-box-overlay .btn-overlay-box-2 {
   position: absolute;
   left: 50%;
@@ -126,21 +108,17 @@ nav #nav_child #navbarSupportedContent .form-button_one .btn-overlay .child-box-
   height: 0;
   border-radius: 0px 10px 10px 0px;
 }
-
 nav #nav_child #navbarSupportedContent .form-button_one button {
   font-size: 17px !important;
 }
-
 nav #nav_child #navbarSupportedContent .form-button_two {
   width: 120px;
   height: 50px;
   position: relative;
 }
-
 nav #nav_child #navbarSupportedContent .form-button_two button {
   font-size: 17px !important;
 }
-
 nav #nav_child #navbarSupportedContent .form-button_two .button-1 {
   width: 100%;
   height: 100%;
@@ -150,17 +128,13 @@ nav #nav_child #navbarSupportedContent .form-button_two .button-1 {
   transition: all 0.5s;
   font-size: 12px;
 }
-
 nav #nav_child #navbarSupportedContent .form-button_two .button-1:hover {
   background-color: transparent;
 }
-
-nav #nav_child #navbarSupportedContent .form-button_two .button-1:hover+.btn-overlay .child-box-overlay .btn-overlay-box-1,
-nav #nav_child #navbarSupportedContent .form-button_two .button-1:hover+.btn-overlay .child-box-overlay .btn-overlay-box-2 {
+nav #nav_child #navbarSupportedContent .form-button_two .button-1:hover + .btn-overlay .child-box-overlay .btn-overlay-box-1, nav #nav_child #navbarSupportedContent .form-button_two .button-1:hover + .btn-overlay .child-box-overlay .btn-overlay-box-2 {
   height: 100%;
   width: 50%;
 }
-
 nav #nav_child #navbarSupportedContent .form-button_two .btn-overlay {
   top: 0;
   position: absolute;
@@ -168,7 +142,6 @@ nav #nav_child #navbarSupportedContent .form-button_two .btn-overlay {
   width: 100%;
   height: 100%;
 }
-
 nav #nav_child #navbarSupportedContent .form-button_two .btn-overlay .child-box-overlay {
   width: 100%;
   height: 100%;
@@ -179,7 +152,6 @@ nav #nav_child #navbarSupportedContent .form-button_two .btn-overlay .child-box-
   justify-content: center;
   align-items: center;
 }
-
 nav #nav_child #navbarSupportedContent .form-button_two .btn-overlay .child-box-overlay .btn-overlay-box-1 {
   position: absolute;
   right: 50%;
@@ -190,7 +162,6 @@ nav #nav_child #navbarSupportedContent .form-button_two .btn-overlay .child-box-
   height: 0;
   border-radius: 10px 0px 0px 10px;
 }
-
 nav #nav_child #navbarSupportedContent .form-button_two .btn-overlay .child-box-overlay .btn-overlay-box-2 {
   position: absolute;
   left: 50%;
@@ -201,9 +172,6 @@ nav #nav_child #navbarSupportedContent .form-button_two .btn-overlay .child-box-
   height: 0;
   border-radius: 0px 10px 10px 0px;
 }
-
 nav #nav_child form {
   gap: 20px;
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
