@@ -6,9 +6,18 @@
   box-shadow: none !important;
 }
 
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  background-color: white;
+  top: 0;
+}
+
 nav {
   box-shadow: 10px 1px 10px #585667 !important;
   padding: 0 !important;
+  position: sticky;
 }
 nav #nav_child {
   display: flex !important;
@@ -174,4 +183,263 @@ nav #nav_child #navbarSupportedContent .form-button_two .btn-overlay .child-box-
 }
 nav #nav_child form {
   gap: 20px;
+}
+
+.section_one {
+  margin-top: 150px !important;
+  display: flex;
+  margin: auto;
+}
+.section_one .one_box_first {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 17px;
+}
+.section_one .one_box_first .heading_one {
+  font-size: 55px;
+  font-weight: 900;
+}
+.section_one .one_box_first .heading_two {
+  font-weight: 400;
+}
+.section_one .one_box_first .heading_three {
+  color: #4A3AFF;
+  font-weight: 900;
+}
+.section_one .one_box_second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section_two {
+  background-color: #4A3AFF;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.section_two .two_headung {
+  display: flex;
+  justify-content: space-between;
+}
+.section_two .two_headung .h1 {
+  color: white;
+  font-weight: 600;
+}
+.section_two .two_headung .two_heading_button {
+  transition: all 0.5s;
+  width: 150px;
+  height: 50px;
+  position: relative;
+  align-self: center;
+}
+.section_two .two_headung .two_heading_button .button-1 {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+  transition: all 0.5s;
+  border: 1px solid white;
+}
+.section_two .two_headung .two_heading_button .button-1:hover {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+.section_two .two_headung .two_heading_button .button-1:hover + .btn-overlay .child-box-overlay .btn-overlay-box-1, .section_two .two_headung .two_heading_button .button-1:hover + .btn-overlay .child-box-overlay .btn-overlay-box-2 {
+  height: 100%;
+  width: 50%;
+}
+.section_two .two_headung .two_heading_button .btn-overlay {
+  top: 0;
+  position: absolute;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+}
+.section_two .two_headung .two_heading_button .btn-overlay .child-box-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  z-index: -2;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.section_two .two_headung .two_heading_button .btn-overlay .child-box-overlay .btn-overlay-box-1 {
+  position: absolute;
+  right: 50%;
+  z-index: -1;
+  transition: all 0.3s;
+  background-color: #4A3AFF;
+  width: 0;
+  height: 0;
+  border-radius: 10px 0px 0px 10px;
+}
+.section_two .two_headung .two_heading_button .btn-overlay .child-box-overlay .btn-overlay-box-2 {
+  position: absolute;
+  left: 50%;
+  z-index: -1;
+  transition: all 0.3s;
+  background-color: #4A3AFF;
+  width: 0;
+  height: 0;
+  border-radius: 0px 10px 10px 0px;
+}
+.section_two .two_headung .two_heading_button :hover {
+  background-color: grey !important;
+}
+.section_two .section_two_child {
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+}
+.section_two .section_two_child .two_box_child {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  border-radius: 5px;
+  margin: 15px 0px;
+  padding: 35px 0px;
+  position: relative;
+  bottom: 0%;
+  transition: all 0.5s;
+}
+.section_two .section_two_child .two_box_child:hover {
+  bottom: 5%;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 2px 2px 15px rgb(172, 191, 255) !important;
+}
+.section_two .section_two_child .two_box_child .img {
+  height: 40%;
+  width: 50%;
+}
+.section_two .section_two_child .two_box_child .img img {
+  border-radius: 100%;
+}
+.section_two .section_two_child .two_box_child h2 {
+  font-weight: 600;
+  color: #585667;
+}
+.section_two .section_two_child .two_box_first {
+  background-color: #C6D2FD;
+}
+.section_two .section_two_child .two_box_second {
+  background-color: #FFFCDD;
+}
+.section_two .section_two_child .two_box_third {
+  background-color: #BCEFBD;
+}
+
+.section_three {
+  margin: 50px 0px;
+}
+.section_three .contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section_three .contact .women_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section_three .contact .women_box .img {
+  width: 250px;
+  height: 400px;
+}
+.section_three .contact .phone_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section_three .contact .phone_box .img {
+  width: 200px;
+  height: 300px;
+}
+.section_three .contact .info_box h2 {
+  font-weight: 600;
+}
+.section_three .contact .info_box div {
+  gap: 20px;
+}
+.section_three .contact .info_box div form {
+  gap: 20px;
+}
+.section_three .contact .info_box div form input,
+.section_three .contact .info_box div form textarea,
+.section_three .contact .info_box div form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid grey;
+}
+.section_three .contact .info_box div form .three_form_button {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  border-radius: none;
+}
+.section_three .contact .info_box div form .three_form_button .button-1 {
+  width: 100%;
+  height: 100%;
+  background-color: #4A3AFF;
+  color: white;
+  border-radius: 10px;
+  transition: all 0.5s;
+  font-size: 12px;
+}
+.section_three .contact .info_box div form .three_form_button .button-1:hover {
+  background-color: transparent;
+}
+.section_three .contact .info_box div form .three_form_button .button-1:hover + .btn-overlay .child-box-overlay .btn-overlay-box-1, .section_three .contact .info_box div form .three_form_button .button-1:hover + .btn-overlay .child-box-overlay .btn-overlay-box-2 {
+  height: 100%;
+  width: 50%;
+}
+.section_three .contact .info_box div form .three_form_button .btn-overlay {
+  top: 0;
+  position: absolute;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+}
+.section_three .contact .info_box div form .three_form_button .btn-overlay .child-box-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  z-index: -2;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.section_three .contact .info_box div form .three_form_button .btn-overlay .child-box-overlay .btn-overlay-box-1 {
+  position: absolute;
+  right: 50%;
+  z-index: -1;
+  transition: all 0.3s;
+  background-color: #585667;
+  width: 0;
+  height: 0;
+  border-radius: 10px 0px 0px 10px;
+}
+.section_three .contact .info_box div form .three_form_button .btn-overlay .child-box-overlay .btn-overlay-box-2 {
+  position: absolute;
+  left: 50%;
+  z-index: 3;
+  transition: all 0.3s;
+  background-color: #585667;
+  width: 0;
+  height: 0;
+  border-radius: 0px 10px 10px 0px;
+}
+.section_three .contact .info_box div form .three_form_button button {
+  font-size: 16px !important;
 }/*# sourceMappingURL=index.css.map */
