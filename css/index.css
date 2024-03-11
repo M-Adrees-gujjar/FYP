@@ -187,13 +187,8 @@ nav #nav_child form {
 
 .section_one {
   margin-top: 150px !important;
-  display: flex;
-  margin: auto;
 }
 .section_one .one_box_first {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   gap: 17px;
 }
 .section_one .one_box_first .heading_one {
@@ -207,21 +202,9 @@ nav #nav_child form {
   color: #4A3AFF;
   font-weight: 900;
 }
-.section_one .one_box_second {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .section_two {
   background-color: #4A3AFF;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.section_two .two_headung {
-  display: flex;
-  justify-content: space-between;
 }
 .section_two .two_headung .h1 {
   color: white;
@@ -292,18 +275,9 @@ nav #nav_child form {
 .section_two .two_headung .two_heading_button :hover {
   background-color: grey !important;
 }
-.section_two .section_two_child {
-  display: flex;
-  justify-content: space-between;
-  display: flex;
-}
 .section_two .section_two_child .two_box_child {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   gap: 15px;
-  align-items: center;
   border-radius: 5px;
   margin: 15px 0px;
   padding: 35px 0px;
@@ -341,28 +315,13 @@ nav #nav_child form {
 .section_three {
   margin: 50px 0px;
 }
-.section_three .contact {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.section_three .contact .women_box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .section_three .contact .women_box .img {
-  width: 250px;
-  height: 400px;
-}
-.section_three .contact .phone_box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 270px;
+  height: 500px;
 }
 .section_three .contact .phone_box .img {
-  width: 200px;
-  height: 300px;
+  width: 150px;
+  height: 200px;
 }
 .section_three .contact .info_box h2 {
   font-weight: 600;
@@ -442,4 +401,150 @@ nav #nav_child form {
 }
 .section_three .contact .info_box div form .three_form_button button {
   font-size: 16px !important;
+}
+
+footer {
+  background-color: #F3F6FF;
+  position: relative;
+  z-index: 10;
+}
+footer .line {
+  color: #4A3AFF;
+  border: 0.5px solid #4A3AFF;
+}
+footer .footer_upper .button_footer {
+  gap: 15px;
+}
+footer .footer_upper .button_footer .footer_button_white {
+  border-color: #4A3AFF !important;
+  width: 100px;
+  height: 40px;
+  position: relative;
+}
+footer .footer_upper .button_footer .footer_button_white .button-1 {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  color: black;
+  border-radius: 10px;
+  transition: all 0.5s;
+  border: 1px solid black;
+}
+footer .footer_upper .button_footer .footer_button_white .button-1:hover {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+footer .footer_upper .button_footer .footer_button_white .button-1:hover + .btn-overlay .child-box-overlay .btn-overlay-box-1, footer .footer_upper .button_footer .footer_button_white .button-1:hover + .btn-overlay .child-box-overlay .btn-overlay-box-2 {
+  height: 100%;
+  width: 50%;
+}
+footer .footer_upper .button_footer .footer_button_white .btn-overlay {
+  top: 0;
+  position: absolute;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+}
+footer .footer_upper .button_footer .footer_button_white .btn-overlay .child-box-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  z-index: -2;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer_upper .button_footer .footer_button_white .btn-overlay .child-box-overlay .btn-overlay-box-1 {
+  position: absolute;
+  right: 50%;
+  z-index: -1;
+  transition: all 0.3s;
+  background-color: #4A3AFF;
+  width: 0;
+  height: 0;
+  border-radius: 10px 0px 0px 10px;
+}
+footer .footer_upper .button_footer .footer_button_white .btn-overlay .child-box-overlay .btn-overlay-box-2 {
+  position: absolute;
+  left: 50%;
+  z-index: -1;
+  transition: all 0.3s;
+  background-color: #4A3AFF;
+  width: 0;
+  height: 0;
+  border-radius: 0px 10px 10px 0px;
+}
+footer .footer_upper .button_footer .footer_button_blue {
+  width: 100px;
+  height: 40px;
+  position: relative;
+}
+footer .footer_upper .button_footer .footer_button_blue .button-1 {
+  width: 100%;
+  height: 100%;
+  background-color: #4A3AFF;
+  color: white;
+  border-radius: 10px;
+  transition: all 0.5s;
+  font-size: 12px;
+}
+footer .footer_upper .button_footer .footer_button_blue .button-1:hover {
+  background-color: transparent;
+}
+footer .footer_upper .button_footer .footer_button_blue .button-1:hover + .btn-overlay .child-box-overlay .btn-overlay-box-1, footer .footer_upper .button_footer .footer_button_blue .button-1:hover + .btn-overlay .child-box-overlay .btn-overlay-box-2 {
+  height: 100%;
+  width: 50%;
+}
+footer .footer_upper .button_footer .footer_button_blue .btn-overlay {
+  top: 0;
+  position: absolute;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+}
+footer .footer_upper .button_footer .footer_button_blue .btn-overlay .child-box-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  z-index: -2;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer_upper .button_footer .footer_button_blue .btn-overlay .child-box-overlay .btn-overlay-box-1 {
+  position: absolute;
+  right: 50%;
+  z-index: -1;
+  transition: all 0.3s;
+  background-color: #585667;
+  width: 0;
+  height: 0;
+  border-radius: 10px 0px 0px 10px;
+}
+footer .footer_upper .button_footer .footer_button_blue .btn-overlay .child-box-overlay .btn-overlay-box-2 {
+  position: absolute;
+  left: 50%;
+  z-index: 3;
+  transition: all 0.3s;
+  background-color: #585667;
+  width: 0;
+  height: 0;
+  border-radius: 0px 10px 10px 0px;
+}
+footer .footer_down {
+  display: flex !important;
+}
+footer .footer_down .footer_down_two {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer_down .footer_down_two span {
+  cursor: pointer;
+  background-color: #BCEFBD;
+  padding: 13px;
+  border-radius: 50%;
+  font-size: 20px;
 }/*# sourceMappingURL=index.css.map */

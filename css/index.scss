@@ -173,7 +173,6 @@ header {
 }
 
 nav {
-    // border: 1px solid blue;
     box-shadow: 10px 1px 10px $text_grey !important;
     padding: 0 !important;
     position: sticky;
@@ -249,20 +248,10 @@ nav {
 
 .section_one {
     margin-top: 150px !important;
-    display: flex; //----------------
-    // height: 30rem;
-    margin: auto;
 
     .one_box_first {
-        // width: 60%;
-        display: flex; //-----------------
-        flex-direction: column;
-        justify-content: center;
         gap: 17px;
-
-        // align-items: center;
         .heading_one {
-            // width: 50%;
             font-size: 55px; //-------------------
             font-weight: 900;
         }
@@ -272,30 +261,16 @@ nav {
         }
 
         .heading_three {
-            // width: 50%;
             color: $primary_color;
-            // font-size: 25px; //-------------------
             font-weight: 900;
         }
-    }
-
-    .one_box_second {
-        // width: 40%;
-        display: flex; //-----------
-        justify-content: center;
-        align-items: center;
     }
 }
 
 .section_two {
     background-color: $primary_color;
-    display: flex; //---------------
-    flex-direction: column;
-    gap: 30px;
 
     .two_headung {
-        display: flex; //-------------
-        justify-content: space-between;
 
         .h1 {
             color: white;
@@ -314,17 +289,10 @@ nav {
     }
 
     .section_two_child {
-        display: flex; //----------------------------
-        justify-content: space-between;
-        display: flex;
 
         .two_box_child {
             width: 100%;
-            display: flex; //--------------
-            justify-content: center;
-            flex-direction: column;
             gap: 15px;
-            align-items: center;
             border-radius: 5px;
             margin: 15px 0px;
             padding: 35px 0px;
@@ -372,29 +340,20 @@ nav {
     margin: 50px 0px;
 
     .contact {
-        display: flex; //-----------
-        justify-content: space-between;
-        align-items: center;
 
         .women_box {
-            display: flex; //------------
-            justify-content: center;
-            align-items: center;
 
             .img {
-                width: 250px;
-                height: 400px;
+                width: 270px;
+                height: 500px;
             }
         }
 
         .phone_box {
-            display: flex; //------------
-            justify-content: center;
-            align-items: center;
 
             .img {
-                width: 200px;
-                height: 300px;
+                width: 150px;
+                height: 200px;
             }
         }
 
@@ -429,6 +388,49 @@ nav {
                         border-radius: none;
                     }
                 }
+            }
+        }
+    }
+}
+
+
+footer {
+    background-color: $blue_100;
+    position: relative;
+    z-index: 10;
+    .line {
+        color: $primary_color;
+        border: 0.5px solid $primary_color;
+    }
+
+    .footer_upper {
+
+        .button_footer {
+            gap: 15px;
+
+            .footer_button_white {
+                border-color: $primary_color !important;
+                @include btn-white(100px, 40px, black);
+            }
+
+            .footer_button_blue {
+                @include btn-blue(100px, 40px, white);
+            }
+        }
+    }
+
+    .footer_down {
+        display: flex !important;
+
+        .footer_down_two {
+            display: flex;
+            justify-content: space-between;
+            span {
+                cursor: pointer;
+                background-color: $green_200;
+                padding: 13px;
+                border-radius: 50%;
+                font-size: 20px;
             }
         }
     }
