@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: none !important;
+}
+
+$primary_color : #4A3AFF;
+$heading_black : #0D0A2C;
+$text_grey : #585667;
+$color_1000 : #5F5C7F;
+$color_900 : #7F7CA2;
+$color_100 : #d1d0dc;
+$red_100 : #FFF0F1;
+$red_400 : #FF002F;
+$purple_100 : #F8F1FF;
+$purple_200 : #F0E3FF;
+$blue_100 : #F3F6FF;
+$blue_200 : #C6D2FD;
+$green_100 : #EEFEF0;
+$green_200 : #BCEFBD;
+$yellow_100 : #FFFDEC;
+$yellow_200 : #FFFCDD;
+
+//=============================
+
+@mixin btn-blue($wdt, $hgt, $crl) {
+    width: $wdt;
+    height: $hgt;
+    position: relative;
+
+    .button-1 {
+        width: 100%;
+        height: 100%;
+        background-color: $primary_color;
+        color: $crl;
+        border-radius: 10px;
+        transition: all 0.5s;
+        font-size: 12px;
+
+        &:hover {
+            background-color: transparent;
+        }
+
+        &:hover+.btn-overlay .child-box-overlay .btn-overlay-box-1,
+        &:hover+.btn-overlay .child-box-overlay .btn-overlay-box-2 {
+            height: 100%;
+            width: 50%;
+        }
+    }
+
+    .btn-overlay {
+        top: 0;
+        position: absolute;
+        z-index: -3;
+        width: 100%;
+        height: 100%;
+
+        .child-box-overlay {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            z-index: -2;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+
+            .btn-overlay-box-1 {
+                position: absolute;
+                right: 50%;
+                z-index: -1;
+                transition: all 0.3s;
+                background-color: $text_grey;
+                width: 0;
+                height: 0;
+                border-radius: 10px 0px 0px 10px;
+            }
+
+            .btn-overlay-box-2 {
+                position: absolute;
+                left: 50%;
+                z-index: 3;
+                transition: all 0.3s;
+                background-color: $text_grey;
+                width: 0;
+                height: 0;
+                border-radius: 0px 10px 10px 0px;
+            }
+        }
+    }
+}
+
+@mixin btn-white($wdt, $hgt, $crl) {
+    width: $wdt;
+    height: $hgt;
+    position: relative;
+
+    .button-1 {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        color: $crl;
+        border-radius: 10px;
+        transition: all 0.5s;
+        border: 1px solid $crl;
+
+        &:hover {
+            background-color: transparent;
+            border: none;
+            color: white;
+        }
+
+        &:hover+.btn-overlay .child-box-overlay .btn-overlay-box-1,
+        &:hover+.btn-overlay .child-box-overlay .btn-overlay-box-2 {
+            height: 100%;
+            width: 50%;
+        }
+    }
+
+    .btn-overlay {
+        top: 0;
+        position: absolute;
+        z-index: -3;
+        width: 100%;
+        height: 100%;
+
+        .child-box-overlay {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            z-index: -2;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+
+            .btn-overlay-box-1 {
+                position: absolute;
+                right: 50%;
+                z-index: -1;
+                transition: all 0.3s;
+                background-color: $primary_color;
+                width: 0;
+                height: 0;
+                border-radius: 10px 0px 0px 10px;
+            }
+
+            .btn-overlay-box-2 {
+                position: absolute;
+                left: 50%;
+                z-index: -1;
+                transition: all 0.3s;
+                background-color: $primary_color;
+                width: 0;
+                height: 0;
+                border-radius: 0px 10px 10px 0px;
+            }
+        }
+    }
+}
+
+
+//=============================
+
+
+main {
+    .main_box {
+        margin: 50px 0px !important;
+        width: 100%;
+        align-items: center;
+        padding: 25px 0px;
+        gap: 20px;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 2px 2px 10px black !important;
+
+        .signUp_heading {
+            h3 {
+                color: $heading_black;
+                font-weight: 700 !important;
+            }
+        }
+
+        .form {
+            width: 100%;
+            form {
+                gap: 15px;
+                width: 100%;
+
+                input,
+                button {
+                    width: 100%;
+                    border: 1px solid grey;
+                    border-radius: 3px !important;
+                    padding: 8px 10px;
+                }
+
+                .form-button {
+                    @include btn-blue(100%, 40px, white);
+                    border-radius: 3px !important;
+
+                    button {
+                        font-size: 15px !important;
+                        border: none;
+                    }
+                }
+            }
+        }
+
+        .footer {
+            h6 {
+                span {
+                    color: $primary_color;
+                    font-weight: 400 !important;
+                }
+            }
+        }
+    }
+}
